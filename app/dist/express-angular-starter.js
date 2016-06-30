@@ -1,12 +1,10 @@
-'use strict';
-
-angular.module('starterApp', [
+window.angular.module('starterApp', [
   'ngAnimate',
   'ui.router',
-  'ngSanitize',
+  'ngSanitize'
 ])
 
-.config(["$locationProvider", "$stateProvider", "$urlRouterProvider", function($locationProvider, $stateProvider, $urlRouterProvider) {
+.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',
@@ -16,13 +14,13 @@ angular.module('starterApp', [
           controller: 'HomeController'
         }
       }
-    });
-  $urlRouterProvider.otherwise('/');
-  $locationProvider.html5Mode(true);
-}]);
+    })
+  $urlRouterProvider.otherwise('/')
+  $locationProvider.html5Mode(true)
+})
 
-angular.module('starterApp')
+window.angular.module('starterApp')
 
-.controller('HomeController', ["$scope", function($scope) {
+.controller('HomeController', function ($scope) {
 
-}])
+})
