@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 app/.sass-cache
 app/dist
+*.sublime*
